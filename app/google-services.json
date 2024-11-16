@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "916807342088",
+    "project_id": "examquizapp-e044d",
+    "storage_bucket": "examquizapp-e044d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:916807342088:android:777b32c2e56f0a8c4a59bd",
+        "android_client_info": {
+          "package_name": "com.app.examquizapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "916807342088-d39qcpluq3f7rb53mdqk8qa0524rn2v5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.examquizapp",
+            "certificate_hash": "110a24703dcb555e709e853381eba8cd6f62c6a2"
+          }
+        },
+        {
+          "client_id": "916807342088-kmpte0b43k1u779i5evc808cedbbv495.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbJmB2-1-YbVm7GwNlmBiD8Ruem-4dse0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "916807342088-kmpte0b43k1u779i5evc808cedbbv495.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
