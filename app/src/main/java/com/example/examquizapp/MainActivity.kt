@@ -33,13 +33,13 @@ class MainActivity : AppCompatActivity() {
     {
         binding.animalCategory.setOnClickListener{
             val intent = Intent(this,QuizActivity::class.java)
-            intent.putExtra("category",27)
+            intent.putExtra("category","27")
             startActivity(intent)
         }
 
         binding.sportsCategory.setOnClickListener{
             val intent = Intent(this,QuizActivity::class.java)
-            intent.putExtra("category",21)
+            intent.putExtra("category","21")
             startActivity(intent)
         }
     }

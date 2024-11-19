@@ -12,6 +12,7 @@ interface ApiInterface {
     @GET("api.php")
     fun getQuiz(
         @Query("amount") amount:String="10",
-        @Query("category") category:String
+        @Query("category") category:String,
+        @Query("type") type:String="multiple"
     ) : Call<QuizModel>
 }

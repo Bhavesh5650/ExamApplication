@@ -7,59 +7,61 @@
     android:layout_height="match_parent"
     tools:context=".view.activity.QuizActivity">
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
+    <TextView
+        android:id="@+id/setTimer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/circle_shape" />
-
-        <TextView
-            android:id="@+id/setTimer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/poppins_bold"
-            android:text="00"
-            android:textColor="@color/black"
-            android:textSize="40sp" />
-    </FrameLayout>
-
-    <TextView
-        android:id="@+id/setQuestion"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_gravity="center"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="Question"
-        android:textAlignment="center"
+        android:fontFamily="@font/poppins_bold"
+        android:text="00"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/optionOne"
+        android:id="@+id/questionCard"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/surf"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setTimer">
+
+        <TextView
+            android:id="@+id/setQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="16dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Question "
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/optionOneCard"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
-        app:cardCornerRadius="8dp"
         app:cardBackgroundColor="@color/surf"
+        app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/setQuestion" >
+        app:layout_constraintTop_toBottomOf="@+id/questionCard">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -85,6 +87,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -94,7 +97,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/optionTwo"
+        android:id="@+id/optionTwoCard"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginStart="16dp"
@@ -104,7 +107,7 @@
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/optionOne">
+        app:layout_constraintTop_toBottomOf="@+id/optionOneCard">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -130,6 +133,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -139,7 +143,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/optionThree"
+        android:id="@+id/optionThreeCard"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginStart="16dp"
@@ -149,7 +153,7 @@
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/optionTwo">
+        app:layout_constraintTop_toBottomOf="@+id/optionTwoCard">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -175,6 +179,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -184,7 +189,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/optionFour"
+        android:id="@+id/optionFourCard"
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:layout_marginStart="16dp"
@@ -194,7 +199,7 @@
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/optionThree">
+        app:layout_constraintTop_toBottomOf="@+id/optionThreeCard">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -220,6 +225,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
+                android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -229,19 +235,21 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/nextQueBtn"
+        android:id="@+id/nextQuestionBtn"
         android:layout_width="0dp"
         android:layout_height="56dp"
         app:cardCornerRadius="16dp"
+        android:visibility="invisible"
         app:cardBackgroundColor="@color/surf"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/optionFour" >
+        app:layout_constraintTop_toBottomOf="@+id/optionFourCard" >
 
         <TextView
+            android:id="@+id/nextBtnText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Next"
@@ -251,5 +259,30 @@
             android:fontFamily="@font/poppins_semibold"/>
 
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/setQuestionCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="0"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_semibold"
+        app:layout_constraintBottom_toBottomOf="@+id/setTimer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/setTimer" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/10"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintBottom_toBottomOf="@+id/setQuestionCount"
+        app:layout_constraintStart_toEndOf="@+id/setQuestionCount"
+        app:layout_constraintTop_toTopOf="@+id/setQuestionCount" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
